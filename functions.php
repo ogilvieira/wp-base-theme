@@ -81,26 +81,14 @@ function mplsagc_setup() {
 endif;
 add_action( 'after_setup_theme', 'mplsagc_setup' );
 
-/**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function mplsagc_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'mplsagc_content_width', 640 );
-}
-add_action( 'after_setup_theme', 'mplsagc_content_width', 0 );
 
 /**
- * Implement the Custom Header feature.
+ * Widgets
  */
 require get_template_directory() . '/inc/widgets.php';
 
-
 /**
- * Implement the Custom Header feature.
+ * Load Scripts
  */
 require get_template_directory() . '/inc/load-scripts.php';
 

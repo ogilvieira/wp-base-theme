@@ -10,19 +10,20 @@
  */
 
 ?>
+<hr>
+<div class="container">
+	<div class="col-lg-12">
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			<div class="site-info">
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mplsagc' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'mplsagc' ), 'WordPress' ); ?></a>
+				<span class="sep"> | </span>
+				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'mplsagc' ), 'mplsagc', '<a href="http://maples.com.br/" rel="designer">Maples</a>' ); ?>
+			</div><!-- .site-info -->
+		</footer><!-- #colophon -->
 
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'mplsagc' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'mplsagc' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'mplsagc' ), 'mplsagc', '<a href="http://gil@maples.com" rel="designer">ogilvieira</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
-
-<?php wp_footer(); ?>
+		<?php wp_footer(); ?>
+	</div>
+</div>
 
 </body>
 </html>
