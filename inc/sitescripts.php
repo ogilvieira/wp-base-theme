@@ -4,15 +4,10 @@ $sitescripts = array();
 
 
 $sitescripts['stylesheet'] = array(
-  'bootstrap' => 'lib/bootstrap.css',
-  'bootstrap-theme' => 'lib/bootstrap-theme.css',
   'app' => 'app.css');
 
 
 $sitescripts['javascript'] = array(
-  'jquery' => 'lib/jquery.js',
-  'jquery-lazyload' => 'lib/jquery.lazyload.js',
-  'jquery-bootstrap' => 'lib/bootstrap.js',
   'app' => 'app.js');
 
 // if(IS_PRODUCTION):
