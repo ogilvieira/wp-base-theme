@@ -12,21 +12,9 @@ function mplsagc_scripts() {
   /**
    * Get assets list.
    */
-  require get_template_directory() . '/inc/sitescripts.php';
+  wp_enqueue_style( 'bundle-css', get_template_directory_uri() . '/assets/css/bundle.css', array(), '20151215');
 
-  //get styles
-  if($sitescripts['stylesheet']):
-    foreach ($sitescripts['stylesheet'] as $key => $stylesheet):
-      wp_enqueue_style( $key, get_template_directory_uri() . '/assets/styles/build/'.$stylesheet, array(), '20151215');
-    endforeach;
-  endif;
-
-  //get scripts
-  if($sitescripts['javascript']):
-    foreach ($sitescripts['javascript'] as $key => $javascript):
-      wp_enqueue_script( $key, get_template_directory_uri() . '/assets/js/build/'.$javascript, array(), '20151215', true);
-    endforeach;
-  endif;
+  wp_enqueue_script( 'bundle-js', get_template_directory_uri() . '/assets/js/bundle.js', array(), '20151215', true);
 
   //get comment script
   if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
